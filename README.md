@@ -40,14 +40,19 @@ npm test
 ### 3. Deploy the Contract
 Build the contract and deploy it in a testnet account
 ```bash
-npm run deploy
+./deploy.sh
 ```
 
-### 4. Start the Frontend
-Start the web application to interact with your smart contract 
+### 4. Send donation
+
 ```bash
-npm start
+near call donaciones1.testnet donate '{}' --amount 0.1 --accountId yairnava.testnet
 ```
+
+## 5. Get donations for account
+
+```bash
+near view donaciones1.testnet get_donation_for_account '{"account_id": "yairnava.testnet"}'
 
 ---
 
